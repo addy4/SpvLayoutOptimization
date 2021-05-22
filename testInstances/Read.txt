@@ -1,0 +1,15 @@
+X Y
+N
+P 
+N1x N1y 
+N2x N2y 
+..
+..
+Nnx Nny
+
+/* 
+X = X axis length of filed ; Y = Y axis length of field 
+N = Total Number of Panels 
+P = No. of medians/junction-boxes 
+Next N lines are the (X,Y) coords for the N panels 
+*/ 
