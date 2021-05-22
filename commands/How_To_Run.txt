@@ -1,6 +1,6 @@
 $cd GA
 $g++ -std=c++17 implement.cpp -o ga_spv
-$./ga_spv < testInstances/Case10_100.rt 
+$./ga_spv < ../testInstances/Case10_100.rt 
 
 ..
 ..
