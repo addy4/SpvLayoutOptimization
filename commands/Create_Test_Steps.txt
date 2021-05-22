@@ -1,0 +1,5 @@
+<assuming that current dir. is project home directory> 
+$cd generateTest
+$vim testcases.cpp (and make changes in X, Y, N, P values as per requirement)
+$g++ -std=c++17 testcases.cpp -o TestC
+$./TestC > ../testInstances/Case<P>_<N>.rt 
