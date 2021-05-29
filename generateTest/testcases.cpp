@@ -83,7 +83,7 @@ int main(int argc, char** argv)
     X = 75 ; //length of field
     Y = 91 ; //width of field
     P = 12 ; //#medians
-    Total = 379 ; //#spv arrays = N
+    Total = 315 ; //#spv arrays = N
     Avg = Total/P + 10000 ;    
     int** arr = (int**)malloc(Y*sizeof(int*)) ; 
     for(int l = 0 ; l < Y ; l++)
