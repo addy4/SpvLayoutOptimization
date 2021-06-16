@@ -39,8 +39,21 @@ void generate(int X, int Y, int P, int Avg,int **arr, int total)
         //once it is made 1 , it will not be made 1 in any of the next iterations 
         //whenever a row/col is printed , panels++ and arr[row][col] = 1 and thus same row col 
         //cannot be made 1 in the next iteration due to the check arr[row][col] != 1  
-        if(arr[row][col] == 0  /* && Boxes[(int)(row*H)][(int)(col*V)] < Avg */) 
+        if(arr[row][col] == 0 && ((row%7 == 0 && col%7 == 0) || rand()%100 < -1)  /* && Boxes[(int)(row*H)][(int)(col*V)] < Avg */) 
         {
+            if(rand()%100 < 50)
+            {
+                //col = col + rand()%2 ; 
+                //col = col%X ; 
+            }
+            else
+            {
+                int check = col - rand()%2 ;
+                if(check > 0)
+                {
+                    //col = check ; 
+                }
+            }
             //cout << col << " " << row << " Belongs to " << (int)(col*H) << " " << (int)(row*V) << endl ;
             //cout << col << " " << row << endl ; 
             //Boxes[(int)(row*H)][(int)(col*V)]++ ;  
@@ -80,10 +93,10 @@ void generate(int X, int Y, int P, int Avg,int **arr, int total)
 int main(int argc, char** argv)
 {
     int X,Y,P,Avg,Total ; 
-    X = 75 ; //length of field
-    Y = 91 ; //width of field
-    P = 12 ; //#medians
-    Total = 315 ; //#spv arrays = N
+    X = 100 ; //length of field
+    Y = 150 ; //width of field
+    P = 4 ; //#medians
+    Total = 120 ; //#spv arrays = N
     Avg = Total/P + 10000 ;    
     int** arr = (int**)malloc(Y*sizeof(int*)) ; 
     for(int l = 0 ; l < Y ; l++)
